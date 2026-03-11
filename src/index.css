@@ -1,0 +1,540 @@
+/* ===== Google Fonts ===== */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* ===== Tailwind ===== */
+@import "tailwindcss";
+
+
+@font-face {
+  font-family: "font-a1";
+  src: local("font-a1"),
+    url("./fonts/Haymila-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "font-i1";
+  src: local("font-i1"),
+    url("./fonts/Inter/static/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "font-inter-1";
+  src: local("Inter Black"),
+       url("./fonts/Inter/static/Inter_18pt-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "font-inter-2";
+  src: local("Inter Black Italic"),
+       url("./fonts/Inter/static/Inter_18pt-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "font-inter-3";
+  src: local("Inter Bold"),
+       url("./fonts/Inter/static/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "font-inter-4";
+  src: local("Inter Bold Italic"),
+       url("./fonts/Inter/static/Inter_18pt-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "font-inter-5";
+  src: local("Inter Regular"),
+       url("./fonts/Inter/static/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "font-inter-6";
+  src: local("Inter Italic"),
+       url("./fonts/Inter/static/Inter_18pt-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "font-inter-7";
+  src: local("Inter Light"),
+       url("./fonts/Inter/static/Inter_18pt-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "font-inter-8";
+  src: local("Inter Thin"),
+       url("./fonts/Inter/static/Inter_18pt-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "font-1";
+  src: local("font-1"),
+    url("./fonts/Protocol.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "font-2";
+  src: local("font-2"),
+    url("./fonts/Protocol.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "font-a-1";
+  src: local("font-a-1"),
+    url("./fonts/amanda.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/* ===== CSS Variables ===== */
+:root {
+  --header-height: 3.5rem;
+
+  /* Colors */
+  --first-color: hsl(183, 37%, 48%);
+  --first-color-alt: hsl(358, 54%, 46%);
+  --first-color-light: hsl(358, 50%, 58%);
+  --title-color: hsl(34, 8%, 16%);
+  --text-color: hsl(34, 8%, 40%);
+  --white-color: hsl(34, 64%, 98%);
+  --gray-color: hsl(34, 8%, 85%);
+  --body-color: hsl(34, 100%, 94%);
+  --body-color-alt: hsl(34, 70%, 88%);
+  --container-color: hsl(34, 32%, 98%);
+
+  /* Fonts */
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Lora", serif;
+
+  /* Font size */
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /* Font weight */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* z index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /* Custom theme color */
+  --color-g-1: #F7F6E5;
+  --color-g-2: #452829;
+  --color-g-3: #FF8C00;
+  --color-g-4: #FFC300;
+  --color-g-5: #FFD400;
+
+
+  --font-a1: "font-a1", "sans-serif";
+  --font-i1: "font-i1", "sans-serif";
+  --font-inter-1: "font-inter-1", sans-serif;
+  --font-inter-2: "font-inter-2", sans-serif;
+  --font-inter-3: "font-inter-3", sans-serif;
+  --font-inter-4: "font-inter-4", sans-serif;
+  --font-inter-5: "font-inter-5", sans-serif;
+  --font-inter-6: "font-inter-6", sans-serif;
+  --font-inter-7: "font-inter-7", sans-serif;
+  --font-inter-8: "font-inter-8", sans-serif;
+  --font-1: "font-1", "sans-serif";
+  --font-2: "font-2", "sans-serif";
+  --font-a-1: "font-a-1", "sans-serif";
+  --font-p-1: "Playfair Display", serif;
+  --font-p-2: "Cormorant Garamond", serif;
+
+
+
+
+
+}
+
+
+@theme {
+  --color-fc: #6E5034;
+  --color-bc: #7B542F;
+  --color-bca: #703B3B;
+
+  --color-g-1: #F7F6E5;
+  --color-g-2: #452829;
+  --color-g-3: #0C7779;
+  --color-g-4: #005461;
+  --color-g-5: #6AECE1;
+
+
+  --font-a1: font-a1, sans-serif;
+
+  --font-i1: font-i1, sans-serif;
+  --font-a2:  "Lora", sans-serif;
+
+--font-code: Source Code Pro, monospace;
+  --font-sora: Sora, sans-serif;
+  --font-AmsterdamSignature: AmsterdamSignature, sans-serif;
+
+
+  --font-inter-1: font-inter-1, sans-serif;
+  --font-inter-2: font-inter-2, sans-serif;
+  --font-inter-3: font-inter-3, sans-serif;
+  --font-inter-4: font-inter-4, sans-serif;
+  --font-inter-5: font-inter-5, sans-serif;
+  --font-inter-6: font-inter-6, sans-serif;
+  --font-inter-7: font-inter-7, sans-serif;
+  --font-inter-8: font-inter-8, sans-serif;
+
+  --font-1: font-1, sans-serif;
+  --font-2: font-2, sans-serif;
+  --font-a-1: font-a-1, sans-serif;
+  --font-p-1: font-p-1, sans-serif;
+  --font-p-2: font-p-2, sans-serif;
+
+
+
+}
+
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-[1120px] ;
+  }
+
+  .section {
+    @apply pt-28 pb-20;
+  }
+}
+
+
+/*========== Responsive typography ==========*/
+@media screen and (width >= 1150px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --bigger-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+/* * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  /* font-size: var(--normal-font-size); */
+}
+
+body {
+  /* background-color: var(--body-color); */
+  color: var(--text-color);
+}
+
+
+button {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  /* color: var(--title-color); */
+  /* font-weight: var(--font-semi-bold); */
+  /* font-family: var(--second-font); */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/* Perkecil ukuran arrow */
+.swiper-button-prev,
+.swiper-button-next {
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+}
+
+/* Perkecil icon panahnya */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 14px; /* defaultnya besar */
+  font-weight: bold;
+  color: white;
+}
+
+/* Hover effect lebih smooth */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(34, 197, 94, 0.8); /* hijau soft */
+  transition: 0.3s ease;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+  opacity: 1;
+}
+
+
+.livewire-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(74, 86, 255, 0.15),
+            transparent 70%
+        );
+    mask-image: radial-gradient(
+        ellipse at center,
+        rgb(248, 28, 28) 40%,
+        transparent 75%
+    );
+    animation: livewireMove 18s linear infinite;
+}
+
+@keyframes livewireMove {
+    from {
+        background-position: 0 -30%, 0 0;
+    }
+    to {
+        background-position: 0 100%, 0 100px;
+    }
+}
+
+
+.grid-bg-1 {
+  background-image:
+    /* garis vertikal */
+    linear-gradient(
+      to right,
+      #fc202f 1px,
+      transparent 1px
+    ),
+    /* garis horizontal */
+    linear-gradient(
+      to bottom,
+      #f62a2a 1px,
+      transparent 1px
+    ),
+    /* titik sambungan */
+    radial-gradient(
+      circle at 0 0,
+      rgba(236, 25, 25, 0.9) 4px,
+      transparent 2.2px
+    );
+
+  background-size: 40px 40px;
+  background-position: 0 0;
+
+  /* ✨ FADE DI SEMUA SISI */
+  -webkit-mask-image:
+    linear-gradient(to top, transparent, black 40px),
+    linear-gradient(to bottom, transparent, black 40px),
+    linear-gradient(to left, transparent, black 40px),
+    linear-gradient(to right, transparent, black 40px);
+
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+}
+
+
+  .stripe {
+        position: absolute;
+        top: -240px;
+        height: 440px;
+        width: 0.5px;
+
+        transform: scaleX(0.3);
+        opacity: 0.18;
+        filter: blur(0.1px);
+
+        /* LANCIP TANPA CLIP-PATH */
+        background: linear-gradient(to bottom,
+                transparent 0%,
+                rgba(247, 49, 18, 0.9)0%,
+                rgba(246, 59, 59, 0.9) 60%,
+                transparent 100%);
+
+        border-radius: 999px;
+        /* bikin ujung halus */
+        opacity: 0.95;
+
+        filter: blur(0.8px) drop-shadow(0 0 10px rgba(59, 130, 246, 0.6));
+        animation: stripeFall linear forwards;
+    }
+
+    @keyframes stripeFall {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(120vh);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+  .blog-content {
+        background: #ffffff;
+        border-radius: 8px;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.8;
+        color: #333333;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Heading */
+    .blog-content h1 {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #111111;
+    }
+
+    .blog-content h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 14px;
+        color: #222222;
+    }
+
+    .blog-content h3 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 12px;
+        color: #333333;
+    }
+
+    /* Paragraph */
+    .blog-content p {
+        margin-bottom: 12px;
+        font-size: 16px;
+        color: #555555;
+        text-align: justify;
+        /* teks rata kiri-kanan */
+        text-justify: inter-word;
+        /* penyesuaian spasi kata */
+    }
+
+    /* Link */
+    .blog-content a {
+        color: #1d4ed8;
+        text-decoration: underline;
+    }
+
+    .blog-content a:hover {
+        color: #2563eb;
+    }
+
+    /* Lists */
+    .blog-content ul,
+    .blog-content ol {
+        margin: 10px 0 12px 20px;
+    }
+
+    .blog-content li {
+        margin-bottom: 6px;
+    }
+
+    /* Images */
+    .blog-content img {
+        max-width: 100%;
+        border-radius: 6px;
+        margin: 12px 0;
+        display: block;
+    }
+
+    /* Blockquote */
+    .blog-content blockquote {
+        border-left: 4px solid #1d4ed8;
+        padding-left: 12px;
+        color: #666666;
+        font-style: italic;
+        margin: 12px 0;
+        background: #f1f5f9;
+        border-radius: 4px;
+        text-align: justify;
+    }
+
+    /* Code */
+    .blog-content code {
+        background: #f3f4f6;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+        font-size: 14px;
+    }
