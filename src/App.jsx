@@ -9,20 +9,20 @@ const getBrandName = () => {
 
   // localhost / IP
   if (host === 'localhost' || /^\d+\.\d+\.\d+\.\d+$/.test(host)) {
-    return 'Budalumroh Travel'
+    return 'LPK Sakura Nihongo'
   }
 
   // domain utama
-  if (host === 'budalumroh.com') {
-    return 'Budalumroh Travel'
+  if (host === 'lpkjosu.com') {
+    return 'LPK JOSU Indonesia'
   }
 
   // subdomain
   if (parts.length >= 3) {
-    return parts[0].charAt(0).toUpperCase() + parts[0].slice(1) + ' Travel'
+    return parts[0].charAt(0).toUpperCase() + parts[0].slice(1) + ' LPK Jepang'
   }
 
-  return 'Budalumroh Travel'
+  return 'LPK JOSU Indonesia'
 }
 
 // ===== Helper Meta =====
@@ -50,28 +50,30 @@ function App() {
   useEffect(() => {
     const brand = getBrandName()
     const url = window.location.origin
-    const ogImage = `${url}/images/og-umroh.jpg` // ganti dengan og image paket Umroh
+    const ogImage = `${url}/images/og-jepang.jpg`
 
-    // ===== Title (SEO Intent Umroh) =====
-    document.title = `${brand} | Paket Umroh & Travel Muslimah`
+    // ===== Title (SEO LPK Jepang) =====
+    document.title = `${brand} | LPK Jepang & Pelatihan Kerja ke Jepang`
 
     // ===== Description =====
     setMetaTag(
       'description',
-      `${brand} menyediakan paket Umroh & Travel Muslimah berkualitas. Pilih tanggal keberangkatan, durasi, dan fasilitas premium. Booking mudah & terpercaya.`
+      `${brand} adalah Lembaga Pelatihan Kerja Bahasa Jepang yang membantu persiapan kerja ke Jepang. Program pelatihan bahasa Jepang, budaya kerja Jepang, dan penyaluran kerja resmi ke Jepang.`
     )
 
     // ===== Keywords =====
     setMetaTag(
       'keywords',
       `
-      paket umroh,
-      travel umroh,
-      umroh plus turki,
-      jadwal umroh,
-      booking umroh,
-      travel muslimah,
-      paket ibadah haji,
+      lpk jepang,
+      kerja ke jepang,
+      pelatihan bahasa jepang,
+      sekolah bahasa jepang,
+      program magang jepang,
+      tokutei ginou,
+      training kerja jepang,
+      kursus bahasa jepang,
+      lembaga pelatihan kerja jepang,
       ${brand}
       `
     )
@@ -80,10 +82,10 @@ function App() {
     setMetaTag('robots', 'index, follow')
 
     // ===== Open Graph (WA / Facebook) =====
-    setOGTag('og:title', `${brand} | Paket Umroh & Travel Muslimah`)
+    setOGTag('og:title', `${brand} | LPK Jepang & Kerja ke Jepang`)
     setOGTag(
       'og:description',
-      `Temukan paket Umroh dengan fasilitas premium, jadwal fleksibel, dan layanan terpercaya bersama ${brand}.`
+      `Belajar bahasa Jepang dan persiapan kerja di Jepang bersama ${brand}. Program pelatihan profesional dengan peluang kerja di Jepang.`
     )
     setOGTag('og:image', ogImage)
     setOGTag('og:url', url)
@@ -91,10 +93,10 @@ function App() {
 
     // ===== Twitter Card =====
     setMetaTag('twitter:card', 'summary_large_image')
-    setMetaTag('twitter:title', `${brand} | Paket Umroh & Travel Muslimah`)
+    setMetaTag('twitter:title', `${brand} | LPK Jepang & Kerja ke Jepang`)
     setMetaTag(
       'twitter:description',
-      `Booking paket Umroh & Travel Muslimah berkualitas dengan layanan terbaik dan fasilitas premium.`
+      `Program pelatihan bahasa Jepang dan persiapan kerja di Jepang bersama ${brand}.`
     )
     setMetaTag('twitter:image', ogImage)
 
